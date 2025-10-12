@@ -1,4 +1,4 @@
-# 📚 Estudo para Exam Rank 2 – Common Core
+# 📚 Study for Exam Rank 2 – Common Core
 
 <p align="center">
   <a href="https://42.fr"><img src="https://img.shields.io/badge/42-Network-blue.svg"></a>
@@ -9,30 +9,30 @@
   <img src="https://img.shields.io/badge/build-passing-brightgreen.svg">
 </p>
 
-Este repositório contém exercícios, funções e notas desenvolvidas enquanto estudo para o **Exam Rank 2** da **Common Core** da Escola 42. O objetivo é praticar e consolidar os conceitos fundamentais de C, manipulação de strings, arrays e lógica algorítmica, seguindo os padrões exigidos pelo exame.
+This repository contains exercises, functions, and notes developed while studying for the **Exam Rank 2** of the **Common Core** at 42 School. The goal is to practice and consolidate fundamental concepts of C, string manipulation, arrays, and algorithmic logic, following the standards required by the exam.
 
-## 📝 Conteúdos
+## 📝 Contents
 
-* **Manipulação de strings:** ✨
+* **String manipulation:** ✨
 
   * `ft_strcspn`
   * `ft_strspn`
   * `ft_strpbrk`
   * `ft_strrev`
-* **Arrays e números:** 🔢
+* **Arrays and numbers:** 🔢
 
   * `max`
   * `is_power_of_2`
-* Exercícios de lógica e manipulação de ponteiros 🧠.
-* `main` de teste para cada função 💻.
+* Logic and pointer manipulation exercises 🧠.
+* Test `main` for each function 💻.
 
-## 🎯 Objetivos
+## 🎯 Goals
 
-* Compreender profundamente cada função da Common Core 🔍.
-* Conseguir implementar funções do zero, **sem copiar** ✍️.
-* Testar cada função com diferentes casos, incluindo casos limite ⚡.
-* Ganhar confiança para o exame real da Escola 42 🏫.
+* Deeply understand each function from the Common Core 🔍.
+* Be able to implement functions from scratch, **without copying** ✍️.
+* Test each function with different cases, including edge cases ⚡.
+* Build confidence for the actual 42 School exam 🏫.
 
 ## 👤 Author
 
-- 🌐 GitHub: [FMancaDev](https://github.com/FMancaDev)   
+* 🌐 GitHub: [FMancaDev](https://github.com/FMancaDev)
