@@ -1,16 +1,12 @@
 int	    is_power_of_2(unsigned int n)
 {
-	int	test = 1;
-
-	while (test <= n)
+	if (n == 0)
+		return (0);
+	while (n % 2 == 0)
 	{
-		if (test == n)
-		{
-			return (1);
-		}
-		test = test * 2;
+		n /= 2;
 	}
-	return (0);
+	return (n == 1);
 }
 
 #include <stdio.h>
