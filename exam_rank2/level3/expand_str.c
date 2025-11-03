@@ -13,13 +13,13 @@ int	main(int argc, char *argv[])
 		}
 		while (argv[1][i])
 		{
-			if ((argv[1][i] == ' ' || argv[1][i] == '\t') && argv[1][i + 1] > 32)
-			{
-				write (1, "   ", 3);
-			}
-			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))
+			if (argv[1][i] != ' ' && argv[1][i] != '\t')
 			{
 				write (1, &argv[1][i], 1);
+			}
+			else if (argv[1][i + 1] != '\0' && argv[1][i + 1] != ' ' && argv[1][i + 1] != '\t')
+			{
+				write (1, "   ", 3);
 			}
 			i++;
 		}
