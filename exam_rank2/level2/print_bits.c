@@ -19,7 +19,7 @@ void	print_bits(unsigned char octet)
 
 	while (i--)
 	{
-		bit = (octet >> 4 & 1) + 48;
+		bit = (octet >> i & 1) + 48;
 		write (1, &bit, 1);
 	}
 }
