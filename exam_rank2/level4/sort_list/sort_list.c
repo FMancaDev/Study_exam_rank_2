@@ -6,12 +6,11 @@
 /*   By: fomanca <fomanca@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:26:32 by fomanca           #+#    #+#             */
-/*   Updated: 2025/11/07 15:32:11 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/11/15 14:49:02 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sort_list.h"
-#include <stdlib.h>
 
 t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 {
@@ -19,9 +18,9 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 	t_list *head;
 
 	head = lst;
-	while (lst != NULL && lst->next != NULL)
+	while (lst && lst->next)
 	{
-		if ((*cmp)(lst->data, lst->next->data) == 0)
+		if (((*cmp)(lst->data, lst->next->data)) == 0)
 		{
 			temp = lst->data;
 			lst->data = lst->next->data;
