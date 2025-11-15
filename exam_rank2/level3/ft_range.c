@@ -12,23 +12,49 @@
 
 #include <stdlib.h>
 
+int	ft_abs(int i)
+{
+	if (i < 0)
+		return (-i);
+	return (i);
+}
+
 int		*ft_range(int start, int end)
 {
-	int	*result;
+	int	*res;
 	int	len;
 	int	i;
 
-	len = abs(start - end) + 1;
-	result = malloc(sizeof(int) * len);
-	if (!result)
+	len = ft_abs(start - end) + 1;
+	res = malloc(sizeof(int) * len);
+	if (!res)
 		return (NULL);
 	i = 0;
 	while (i < len)
 	{
-		if (start <= end)
-			result[i++] = start++;
-		else if (start >= end)
-				result[i++] = start--;
+		res[i++] = start;
+		if (start < end)
+			start++;
+		else if (start > end)
+			start--;
 	}
-	return (result);
+	return (res);
+}
+
+#include <stdio.h>
+
+int	main()
+{
+	int	start = 10;
+	int	end = 35;
+	int	len = ft_abs(start - end) + 1;
+	int	*res = ft_range(start, end);
+	int	i = 0;
+
+	while (i < len)
+	{
+		printf("%d ", res[i]);
+		i++;
+	}
+	printf("\n");
 }
