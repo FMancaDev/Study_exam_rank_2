@@ -12,16 +12,18 @@
 
 #include <stdlib.h>
 
-#define WD_LEN 1000
-#define	WD_NUM 1000
+#define NUM 5000
+#define LEN 5000
 
 char **ft_split(char *str)
 {
 	char **arr;
-	int	j;
-	int	k;
+	int j;
+	int k;
 
-	arr = (char **)malloc(sizeof(char *) * WD_NUM);
+	arr = (char **)malloc(sizeof(char *) * NUM);
+	if (!arr)
+		return NULL;
 	while (*str == ' ' || *str == '\t' || *str == '\n')
 		str++;
 	j = 0;
@@ -30,7 +32,9 @@ char **ft_split(char *str)
 		if (*str > 32)
 		{
 			k = 0;
-			arr[j] = (char *)malloc(sizeof(char) * WD_LEN);
+			arr[j] = (char *)malloc(sizeof(char) * LEN);
+			if (!arr[j])
+				return NULL;
 			while (*str > 32)
 				arr[j][k++] = *str++;
 			arr[j][k] = '\0';
@@ -41,4 +45,19 @@ char **ft_split(char *str)
 	}
 	arr[j] = 0;
 	return (arr);
+}
+
+#include <stdio.h>
+
+int	main()
+{
+	char	**tab = ft_split(" ola como estas            hj ola jnj");
+	int	i = 0;
+
+	while (tab[i])
+	{
+		printf("[%s]\n", tab[i]);
+		i++;
+	}
+
 }
