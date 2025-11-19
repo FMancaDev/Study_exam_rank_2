@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42porto.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:26:32 by fomanca           #+#    #+#             */
-/*   Updated: 2025/11/15 14:49:02 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/11/19 17:25:55 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 	head = lst;
 	while (lst && lst->next)
 	{
-		if (((*cmp)(lst->data, lst->next->data)) == 0)
+		if (cmp(lst->data, lst->next->data) == 0)
 		{
 			temp = lst->data;
 			lst->data = lst->next->data;
